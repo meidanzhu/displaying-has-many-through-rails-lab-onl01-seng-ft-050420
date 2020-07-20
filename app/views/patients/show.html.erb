@@ -4,9 +4,10 @@ Name: <%= @patient.name %>
 Age: <%= @patient.age.to_s %>
 Appointments:
 <ul>
-<% @patient.appointments.each do |appt| %>
+<% @patient.appointments.each do |app| %>
     <li>
-        <%= appt.display_time %> with <%= link_to appt.doctor.name, doctor_path(appt.doctor) %>
+        <%= appt.display_time %> 
+        <%= link_to app.doctor.name, doctor_path(app.doctor) %>
     </li>
 <% end %>
 </ul>
